@@ -11,10 +11,10 @@ export default defineNuxtConfig({
     baseURL: '/university-lesson-3/',
     head: {
       link: [
-        { rel: 'shortcut icon', href: '/icons/favicon.ico' },
-        { rel: 'icon', type: 'image/png', href: '/icons/favicon-96x96.png', sizes: '96x96' },
-        { rel: 'apple-touch-icon', type: 'image/png', href: '/icons/apple-touch-icon.png', sizes: '180x180' },
-        { rel: 'manifest', href: '/site.webmanifest' }
+        { rel: 'shortcut icon', href: 'icons/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: 'icons/favicon-96x96.png', sizes: '96x96' },
+        { rel: 'apple-touch-icon', type: 'image/png', href: 'icons/apple-touch-icon.png', sizes: '180x180' },
+        { rel: 'manifest', href: 'site.webmanifest' }
       ]
     }
   },
