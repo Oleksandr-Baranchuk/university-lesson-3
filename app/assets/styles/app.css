@@ -11,4 +11,5 @@ html { scroll-behavior: smooth; }
 
 :root {
   --ui-container: var(--container-8xl);
+  --ui-radius: 0.5rem;
 }
