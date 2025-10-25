@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     preset: 'static'
   },
   app: {
+    baseURL: '/university-lesson-3/',
     head: {
       link: [
         { rel: 'shortcut icon', href: '/icons/favicon.ico' },
