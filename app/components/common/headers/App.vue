@@ -1,12 +1,12 @@
 <template>
   <UHeader mode="drawer">
     <template #left>
-      <ui-logo/>
+      <ui-logo />
     </template>
-    <UNavigationMenu :items="menuItems"/>
+    <UNavigationMenu :items="menuItems" />
     <template #right>
-      <ui-locale-select class="mr-2"/>
-      <UColorModeSwitch />
+      <ui-locale-select class="mr-2" />
+      <ui-switch-theme />
     </template>
   </UHeader>
 </template>
@@ -15,7 +15,7 @@
   import type { NavigationMenuItem } from '@nuxt/ui';
 
   const route = useRoute();
-  const { t }= useI18n();
+  const { t } = useI18n();
 
   const menuItems = computed<NavigationMenuItem[]>(() => {
     return [
@@ -39,6 +39,6 @@
         to: '/contacts',
         active: route.path.startsWith('/contacts')
       }
-    ]
+    ];
   });
 </script>
