@@ -32,9 +32,14 @@ export default defineNuxtConfig({
         label: 'Українська',
         file: 'uk/index.ts'
       }
-    ],
+    ]
   },
   pinia: {
     storesDirs: ['./app/stores/**']
   },
+  eslint: {
+    config: {
+      stylistic: false
+    }
+  }
 });

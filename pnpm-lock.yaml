@@ -51,6 +51,9 @@ importers:
       gh-pages:
         specifier: ^6.3.0
         version: 6.3.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
 packages:
 
