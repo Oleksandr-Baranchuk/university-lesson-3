@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+  --font-sans: 'Epunda Slab', sans-serif;
+  --container-8xl: 98rem;
+}
+
+html { scroll-behavior: smooth; }
+
+
+:root {
+  --ui-container: var(--container-8xl);
+}
