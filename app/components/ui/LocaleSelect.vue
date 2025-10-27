@@ -1,9 +1,15 @@
 <template>
-  <ULocaleSelect :model-value="locale" class="w-36" :locales="[en, uk]" @update:model-value="onSetLocale($event as TLocales)"/>
+  <ULocaleSelect
+    :model-value="locale"
+    class="w-36"
+    :locales="[en, uk]"
+    @update:model-value="onSetLocale($event as TLocales)"
+  />
 </template>
 
 <script setup lang="ts">
   import { uk, en } from '@nuxt/ui/locale';
+  import { setLocale } from 'yup';
 
   type TLocales = 'en' | 'uk';
 
@@ -12,8 +18,8 @@
 
   const onSetLocale = async (locale: TLocales) => {
     globalStore.setLoadings(true);
-    await loadLocaleMessages(locale)
-    setLocale(locale)
+    await loadLocaleMessages(locale);
+    setLocale(locale);
     globalStore.setLoadings(false);
-  }
+  };
 </script>

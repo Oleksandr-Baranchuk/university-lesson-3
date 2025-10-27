@@ -11,5 +11,6 @@
 </template>
 
 <script setup lang="ts">
+  useYupValidationMessage();
   const globalStore = useGlobalStore();
 </script>

@@ -2,8 +2,8 @@
   <div ref="wrapElem">
     <USwitch
       v-model="isLight"
-      unchecked-icon="material-symbols:dark-mode"
-      checked-icon="material-symbols:light-mode"
+      unchecked-icon="material-symbols-light:dark-mode"
+      checked-icon="material-symbols-light:light-mode"
     />
   </div>
 </template>

@@ -4,6 +4,21 @@ export default defineAppConfig({
       primary: 'indigo',
       secondary: 'fuchsia',
       neutral: 'gray'
+    },
+    formField: {
+      defaultVariants: {
+        size: 'xl'
+      }
+    },
+    input: {
+      defaultVariants: {
+        size: 'xl'
+      }
+    },
+    textarea: {
+      defaultVariants: {
+        size: 'xl'
+      }
     }
   }
 });
