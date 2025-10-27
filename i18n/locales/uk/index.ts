@@ -2,9 +2,9 @@ export default defineI18nLocale(() => ({
   header: {
     navigation: {
       home: 'Головна',
-      about: 'Про нас',
+      news: 'Новини',
       education: 'Навчання',
-      contacts: 'Контакти',
+      contacts: 'Контакти'
     }
   }
-}))
+}));

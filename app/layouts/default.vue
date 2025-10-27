@@ -1,13 +1,9 @@
 <template>
-  <div>
+  <UApp>
     <common-headers-app />
-    <UMain>
-      <slot/>
-    </UMain>
-    <footer>
-      App footer
-    </footer>
-  </div>
+    <main class="flex-1 flex flex-col">
+      <slot />
+    </main>
+    <common-footers-app />
+  </UApp>
 </template>
-<script setup lang="ts">
-</script>

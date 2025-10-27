@@ -1,9 +1,16 @@
 <template>
-  <UHeader mode="drawer">
+  <UHeader>
     <template #left>
       <ui-logo />
     </template>
     <UNavigationMenu :items="menuItems" />
+    <template #body>
+      <UNavigationMenu
+        :items="menuItems"
+        orientation="vertical"
+        class="-mx-2.5"
+      />
+    </template>
     <template #right>
       <ui-locale-select class="mr-2" />
       <ui-switch-theme />
@@ -16,27 +23,28 @@
 
   const route = useRoute();
   const { t } = useI18n();
+  const localePath = useLocalePath();
 
   const menuItems = computed<NavigationMenuItem[]>(() => {
     return [
       {
         label: t('header.navigation.home'),
-        to: '/',
+        to: localePath('/'),
         active: route.path === '/'
       },
       {
-        label: t('header.navigation.about'),
-        to: '/about',
-        active: route.path.startsWith('/about')
+        label: t('header.navigation.news'),
+        to: localePath('/news'),
+        active: route.path.startsWith('/news')
       },
       {
         label: t('header.navigation.education'),
-        to: '/education',
+        to: localePath('/education'),
         active: route.path.startsWith('/education')
       },
       {
         label: t('header.navigation.contacts'),
-        to: '/contacts',
+        to: localePath('/contacts'),
         active: route.path.startsWith('/contacts')
       }
     ];
