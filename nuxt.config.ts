@@ -3,7 +3,14 @@ export default defineNuxtConfig({
   ssr: false,
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/eslint', '@nuxt/ui'],
+  modules: [
+    './modules/nuxt-particles/module',
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/eslint',
+    '@nuxt/ui'
+  ],
   nitro: {
     preset: 'static'
   },
@@ -16,9 +23,13 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', type: 'image/png', href: 'icons/apple-touch-icon.png', sizes: '180x180' },
         { rel: 'manifest', href: 'site.webmanifest' }
       ]
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   css: ['~/assets/styles/app.css'],
+  imports: {
+    dirs: ['globals/**', 'composables/**', 'utils/**']
+  },
   i18n: {
     defaultLocale: 'uk',
     locales: [
@@ -44,5 +55,9 @@ export default defineNuxtConfig({
   },
   colorMode: {
     preference: 'dark'
+  },
+  particles: {
+    mode: 'full',
+    lazy: true
   }
 });

@@ -1,12 +1,15 @@
 <template>
-  <UApp>
+  <div class="flex flex-col min-h-screen">
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage />
+      <ui-loader
+        v-if="globalStore.loadings"
+        fixed
+      />
     </NuxtLayout>
-    <ui-loader v-if="globalStore.loadings" fixed/>
-  </UApp>
+  </div>
 </template>
 
 <script setup lang="ts">
-  const globalStore = useGlobalStore()
+  const globalStore = useGlobalStore();
 </script>
