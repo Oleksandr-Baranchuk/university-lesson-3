@@ -38,7 +38,51 @@
           enable: true
         },
         number: {
-          value: 100
+          value: 200
+        }
+      },
+      interactivity: {
+        detectsOn: 'window',
+        events: {
+          onClick: {
+            enable: true,
+            mode: 'repulse'
+          },
+          onHover: {
+            enable: true,
+            mode: 'grab'
+          },
+          resize: {
+            delay: 0.5,
+            enable: true
+          }
+        },
+        modes: {
+          grab: {
+            distance: 300,
+            links: {
+              blink: false,
+              consent: false,
+              opacity: 1
+            }
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+            factor: 100,
+            speed: 1,
+            maxSpeed: 50,
+            easing: 'ease-out-quad',
+            divs: {
+              distance: 200,
+              duration: 0.4,
+              factor: 100,
+              speed: 1,
+              maxSpeed: 50,
+              easing: 'ease-out-quad',
+              selectors: {}
+            }
+          }
         }
       }
     };
