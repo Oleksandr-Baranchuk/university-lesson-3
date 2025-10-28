@@ -4,7 +4,7 @@
       variant="soft"
       class="max-w-xl w-full"
     >
-      <h1 class="text-3xl mb-5 text-center">
+      <h1 class="text-3xl mb-5 text-center text-highlighted">
         {{ $t('forms.contacts.title') }}
       </h1>
       <CommonContactsForm />

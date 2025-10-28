@@ -9,7 +9,6 @@
 
 <script setup lang="ts">
   import { uk, en } from '@nuxt/ui/locale';
-  import { setLocale } from 'yup';
 
   type TLocales = 'en' | 'uk';
 

@@ -1,5 +1,5 @@
 <template>
-  <UCard variant="subtle">
+  <UPageCard variant="subtle">
     <div class="flex items-start gap-4">
       <div class="w-[120px] h-[120px]">
         <ULink
@@ -27,7 +27,7 @@
     <template #footer>
       <p class="text-sm text-right">{{ dateFormat }}</p>
     </template>
-  </UCard>
+  </UPageCard>
 </template>
 
 <script setup lang="ts">

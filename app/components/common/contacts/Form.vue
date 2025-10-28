@@ -41,7 +41,10 @@
       />
     </UFormField>
     <div class="text-center">
-      <UButton type="submit">
+      <UButton
+        type="submit"
+        :loading="loading"
+      >
         {{ $t('actions.submit') }}
       </UButton>
     </div>

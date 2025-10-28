@@ -35,5 +35,39 @@ export default defineI18nLocale(() => ({
   },
   actions: {
     submit: 'Submit'
+  },
+  home: {
+    title: 'Welcome'
+  },
+  schedule: {
+    title: 'Schedule',
+    pair: 'pair',
+    contactsType: {
+      zoom: 'Zoom',
+      googleMeet: 'Meet'
+    },
+    days: {
+      Mon: 'Mon',
+      Tue: 'Tue',
+      Wed: 'Wed',
+      Thu: 'Thu',
+      Fri: 'Fri',
+      Sat: 'Sat',
+      Sun: 'Sun'
+    },
+    lessonType: {
+      '1': 'Pr',
+      '2': 'Lec',
+      '3': 'Lab'
+    },
+    modal: {
+      contacts: {
+        title: 'Additional Information',
+        teacher: 'Teacher'
+      }
+    }
+  },
+  news: {
+    title: 'News'
   }
 }));

@@ -1,5 +1,5 @@
 <template>
-  <UFooter>
+  <UFooter class="">
     <p class="text-muted text-sm">Copyright © {{ Year }}</p>
   </UFooter>
 </template>

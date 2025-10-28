@@ -1,7 +1,7 @@
 import { setLocale } from 'yup';
 
 const useYupValidationMessage = () => {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
 
   const apply = () => {
     setLocale({
@@ -26,9 +26,7 @@ const useYupValidationMessage = () => {
     });
   };
 
-  watch(locale, apply, {
-    immediate: true
-  });
+  return apply;
 };
 
 export default useYupValidationMessage;

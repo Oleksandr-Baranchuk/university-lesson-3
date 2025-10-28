@@ -1,13 +1,21 @@
 <template>
-  <div class="container mx-auto p-4 my-auto">
-    <div class="grid xl:grid-cols-3 lg:gap-6 md:grid-cols-2 gap-4 grid-cols-1">
-      <CommonNewsCard
-        v-for="(item, i) in items"
-        :key="i"
-        :item="item"
-      />
-    </div>
-  </div>
+  <UPage>
+    <UPageHeader
+      as="h1"
+      :ui="{ title: 'mx-auto' }"
+      :title="$t('news.title')"
+    />
+
+    <UPageBody class="container mx-auto p-4 my-auto">
+      <UPageGrid>
+        <CommonNewsCard
+          v-for="(item, i) in items"
+          :key="i"
+          :item="item"
+        />
+      </UPageGrid>
+    </UPageBody>
+  </UPage>
 </template>
 
 <script setup lang="ts">

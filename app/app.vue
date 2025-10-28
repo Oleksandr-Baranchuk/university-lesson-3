@@ -11,6 +11,16 @@
 </template>
 
 <script setup lang="ts">
-  useYupValidationMessage();
+  const { locale } = useI18n();
+  const onApplyYupLocal = useYupValidationMessage();
   const globalStore = useGlobalStore();
+  const dayjs = useDayjs();
+  watch(
+    locale,
+    lng => {
+      onApplyYupLocal();
+      dayjs.locale(lng);
+    },
+    { immediate: true }
+  );
 </script>

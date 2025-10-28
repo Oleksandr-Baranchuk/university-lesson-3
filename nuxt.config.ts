@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: [
     './modules/nuxt-particles/module',
+    'dayjs-nuxt',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/i18n',
@@ -59,5 +60,11 @@ export default defineNuxtConfig({
   particles: {
     mode: 'full',
     lazy: true
+  },
+  dayjs: {
+    locales: ['en', 'uk'],
+    plugins: ['isoWeek', 'utc', 'timezone'],
+    defaultLocale: 'uk',
+    defaultTimezone: 'Europe/Kiev'
   }
 });
