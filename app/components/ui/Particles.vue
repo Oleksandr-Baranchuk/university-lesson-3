@@ -15,6 +15,7 @@
   const options = computed<ParticlesOptions>(() => {
     const isDark = colorMode.value === 'dark';
     const color = isDark ? '#ebe6e7' : '#364153';
+
     return {
       autoPlay: true,
       smooth: true,
@@ -39,7 +40,7 @@
           enable: true
         },
         number: {
-          value: isMobile ? 60 : 200
+          value: isMobile.value ? 40 : 200
         }
       },
       interactivity: {

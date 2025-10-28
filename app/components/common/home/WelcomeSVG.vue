@@ -1,5 +1,9 @@
 <template>
-  <svg class="w-full h-full">
+  <svg
+    preserveAspectRatio="xMidYMid meet"
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-screen h-[40vh] select-none"
+  >
     <text
       x="50%"
       y="70%"
@@ -10,19 +14,20 @@
   </svg>
 </template>
 
-<script setup lang="ts"></script>
 <style scoped>
+  svg {
+    --color-text: var(--ui-primary);
+    --color-text-second: transparent;
+  }
   svg text {
     font-size: calc(6vw + 3rem);
     stroke-width: 2;
     animation: stroke 5s infinite alternate;
-
-    --color-text: var(--ui-primary);
-    --color-text-second: rgba(255, 255, 255, 0);
     stroke: var(--color-text);
+    vector-effect: non-scaling-stroke;
   }
 
-  .dark svg text {
+  :global(html.dark) svg {
     --color-text: var(--ui-secondary);
   }
 
