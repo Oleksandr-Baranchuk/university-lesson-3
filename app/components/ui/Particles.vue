@@ -8,6 +8,7 @@
 
 <script setup lang="ts">
   import type { ISourceOptions as ParticlesOptions } from '@tsparticles/engine';
+  const isMobile = breakpoints.smaller('lg');
 
   const PAGE_TRANSITION_TIME = 500; // 500ms
   const colorMode = useColorMode();
@@ -38,7 +39,7 @@
           enable: true
         },
         number: {
-          value: 200
+          value: isMobile ? 60 : 200
         }
       },
       interactivity: {
