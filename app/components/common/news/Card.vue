@@ -9,9 +9,7 @@
           <img
             :src="item.img"
             :alt="item.title"
-            width="120"
-            height="120"
-            class="object-cover"
+            class="object-cover w-[120px] h-[120px]"
           />
         </ULink>
       </div>
